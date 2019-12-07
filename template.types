@@ -1,0 +1,14 @@
+import { setState } from "./COMPONENT_NAME.actions";
+
+export type COMPONENT_NAMEState = {
+  foo: true;
+};
+
+export type COMPONENT_NAMEProps = {
+  foo: true;
+};
+
+export type COMPONENT_NAMEAction = ReturnType<
+  typeof setState 
+>;
+

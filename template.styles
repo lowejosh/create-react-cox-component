@@ -1,0 +1,4 @@
+import styled from "providers/ThemeProvider";
+
+export const COMPONENT_NAMEContainer = styled.div(({ theme }) => ({
+}));
