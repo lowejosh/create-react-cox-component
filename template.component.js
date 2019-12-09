@@ -18,7 +18,15 @@ const component = componentName => `
       ${componentName}InitialState
     );
 
-    return ${componentName};
+    return (
+    <${componentName}ContextState.Provider value={state}>
+      <${componentName}ContextDispatch.Provider value={dispatch}>
+        <${componentName}Container>
+          {${componentName}}
+        </${componentName}Container>
+      </${componentName}ContextDispatch.Provider>
+    </${componentName}ContextState.Provider>
+    )
   };
 `;
 
