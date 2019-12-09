@@ -45,7 +45,9 @@ const init = path => {
           : console.log(
               name === "index"
                 ? "successfully created index.ts"
-                : `successfully created ${componentName}.${name}.${suffix}`
+                : `successfully created ${path}${
+                    name !== "component" ? `.${name}` : ""
+                  }.${suffix}`
             );
       }
     );
