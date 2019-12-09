@@ -8,11 +8,11 @@ Initializes a react component using the following pattern:
    path
    │   index.ts
    │   component.tsx
-   │   component.types.tsx
-   │   component.styles.tsx
-   │   component.context.tsx
-   │   component.reducer.tsx
-   │   component.actions.tsx
+   │   component.types.ts
+   │   component.styles.ts
+   │   component.context.ts
+   │   component.reducer.ts
+   │   component.actions.ts
 ```
 
 ### Usage
