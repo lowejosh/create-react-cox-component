@@ -17,5 +17,6 @@ Initializes a react component using the following pattern:
 
 ### Usage
 
-npm install create-react-cox-component
-npx crcc _path/to/component_
+`npm install create-react-cox-component`
+
+`npx crcc path/to/component`
