@@ -14,14 +14,14 @@ const init = path => {
   // if a folder path is specified
   if (path.includes("/")) {
     componentName = path.substr(path.lastIndexOf("/") + 1, path.length);
-    folder = `./${path.substr(0, path.lastIndexOf("/"))}`;
-    fs.ensureDirSync(folder);
+    folder = path.substr(0, path.lastIndexOf("/"));
+    fs.ensureDirSync(`./${folder}`);
   }
 
   // file suffix : content
   const inputs = {
-    component: getComponentTemplate(componentName),
     index: getIndexTemplate(componentName),
+    component: getComponentTemplate(componentName),
     types: getTypesTemplate(componentName),
     actions: getActionsTemplate(),
     reducer: getReducerTemplate(componentName),
@@ -44,7 +44,7 @@ const init = path => {
           ? console.log(err)
           : console.log(
               name === "index"
-                ? "successfully created index.ts"
+                ? `successfully created ${folder}/index.ts`
                 : `successfully created ${path}${
                     name !== "component" ? `.${name}` : ""
                   }.${suffix}`
