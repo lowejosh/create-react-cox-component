@@ -1,11 +1,11 @@
 const fs = require("fs-extra");
-const getComponentTemplate = require("./template.component");
-const getActionsTemplate = require("./template.actions");
-const getContextTemplate = require("./template.context");
-const getIndexTemplate = require("./template.index");
-const getReducerTemplate = require("./template.reducer");
-const getStylesTemplate = require("./template.styles");
-const getTypesTemplate = require("./template.types");
+const getComponentTemplate = require("./templates/template.component");
+const getActionsTemplate = require("./templates/template.actions");
+const getContextTemplate = require("./templates/template.context");
+const getIndexTemplate = require("./templates/template.index");
+const getReducerTemplate = require("./templates/template.reducer");
+const getStylesTemplate = require("./templates/template.styles");
+const getTypesTemplate = require("./templates/template.types");
 
 const init = path => {
   let componentName = path;
