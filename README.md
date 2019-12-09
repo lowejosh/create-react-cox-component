@@ -11,6 +11,7 @@ Initializes a react component using the following pattern:
    │   component.types.ts
    │   component.styles.ts
    │   component.context.ts
+   │   component.hooks.ts
    │   component.reducer.ts
    │   component.actions.ts
 ```
