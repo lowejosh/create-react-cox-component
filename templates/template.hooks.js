@@ -1,33 +1,31 @@
-const hooks = componentName => `
-    import { useContext } from "react";
-    import {
-    ${componentName}ContextState,
-    ${componentName}ContextDispatch
-    } from "./${componentName}.context";
+const hooks = componentName => `import { useContext } from "react";
+import {
+${componentName}ContextState,
+${componentName}ContextDispatch
+} from "./${componentName}.context";
 
-    export const use${componentName}ContextState = () => {
-    const context = useContext(${componentName}ContextState);
+export const use${componentName}ContextState = () => {
+const context = useContext(${componentName}ContextState);
 
-    if (context === undefined) {
-        throw new Error(
-        "use${componentName}ContextState should be used within an use${componentName}ContextState provider"
-        );
-    }
+if (context === undefined) {
+    throw new Error(
+    "use${componentName}ContextState should be used within an use${componentName}ContextState provider"
+    );
+}
 
-    return context;
-    };
+return context;
+};
 
-    export const use${componentName}ContextDispatch = () => {
-    const context = useContext(${componentName}ContextDispatch);
+export const use${componentName}ContextDispatch = () => {
+const context = useContext(${componentName}ContextDispatch);
 
-    if (context === undefined) {
-        throw new Error(
-        "use${componentName}ContextDispatch should be used within an use${componentName}ContextDispatch provider"
-        );
-    }
+if (context === undefined) {
+    throw new Error(
+    "use${componentName}ContextDispatch should be used within an use${componentName}ContextDispatch provider"
+    );
+}
 
-    return context;
-    };
-`;
+return context;
+};`;
 
 module.exports = hooks;
