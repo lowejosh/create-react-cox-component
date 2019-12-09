@@ -1,0 +1,30 @@
+{
+  "name": "create-react-cox-component",
+  "version": "1.0.0",
+  "description": "Initializes a Typescript React component using the context/reducer pattern",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowejosh/initComponent.git"
+  },
+  "keywords": [
+    "initialize",
+    "typescript",
+    "react",
+    "component",
+    "context",
+    "reducer"
+  ],
+  "author": "Joshua Lowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lowejosh/initComponent/issues"
+  },
+  "homepage": "https://github.com/lowejosh/initComponent#readme",
+  "bin": {
+    "crcc": "./cli.js"
+  }
+}
