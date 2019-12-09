@@ -20,4 +20,4 @@ Initializes a react component using the following pattern:
 
 `npm install create-react-cox-component`
 
-`npx crcc path/to/component`
+`npx crcc path/to/component/component-name`
