@@ -6,6 +6,7 @@ const getIndexTemplate = require("./templates/template.index");
 const getReducerTemplate = require("./templates/template.reducer");
 const getStylesTemplate = require("./templates/template.styles");
 const getTypesTemplate = require("./templates/template.types");
+const getHooksTemplate = require("./templates/template.hooks");
 
 const init = path => {
   let componentName = path;
@@ -26,6 +27,7 @@ const init = path => {
     actions: getActionsTemplate(),
     reducer: getReducerTemplate(componentName),
     context: getContextTemplate(componentName),
+    hooks: getHooksTemplate(componentName),
     styles: getStylesTemplate(componentName)
   };
 
