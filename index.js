@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs-extra");
 const getComponentTemplate = require("./template.component");
 const getActionsTemplate = require("./template.actions");
 const getContextTemplate = require("./template.context");
@@ -14,8 +14,8 @@ const init = path => {
   // if a folder path is specified
   if (path.includes("/")) {
     componentName = path.substr(path.lastIndexOf("/") + 1, path.length);
-    folder = path.substr(0, path.lastIndexOf("/"));
-    !fs.existsSync(folder) && fs.mkdirSync(folder);
+    folder = `./${path.substr(0, path.lastIndexOf("/"))}`;
+    fs.ensureDirSync(folder);
   }
 
   // file suffix : content
